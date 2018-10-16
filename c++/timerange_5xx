@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#####
+#
+# This wrapper script can be cusotmized for your solution, however, we expect
+# that it will work out of the box for you.
+#
+# To use, simply:
+#
+#   1. modify timerange_5xx.cpp
+#   2. run ./timerange_5xx
+#
+#####
+
+DIRNAME="$(dirname "$(readlink -e "${BASH_SOURCE[0]}")")"
+[[ -z "$NOREMAKE" && -e "$DIRNAME/Makefile" ]] && (cd "$DIRNAME" && make timerange_5xx.o)
+exec "$DIRNAME/timerange_5xx.o" "$@"

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#####
+#
+# This wrapper script can be cusotmized for your solution, however, we expect
+# that it will work out of the box for you.
+#
+# To use, simply:
+#
+#   1. modify find_bad_push.cpp
+#   2. run ./find_bad_push
+#
+#####
+
+DIRNAME="$(dirname "$(readlink -e "${BASH_SOURCE[0]}")")"
+[[ -z "$NOREMAKE" && -e "$DIRNAME/Makefile" ]] && (cd "$DIRNAME" && make find_bad_push.o)
+exec "$DIRNAME/find_bad_push.o" "$@"

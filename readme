@@ -1,0 +1,51 @@
+Welcome to the Facebook PE University Recruiting Linux Challenge
+
+To get started:
+1. Please run the following, filling in with your name and email address:
+   echo "Your Name <your@email.address>" > ~/OWNERS.txt
+
+Now that we know a little about you, we've got three challenges for you today,
+but first an introduction.
+
+# LOG INSPECTOR
+
+If you've ever managed a production service before you know that sometimes
+your service may start having problems.  Ideally these are being logged to
+a logfile:
+
+  1. maybe someone deployed some bad code
+  2. or the behavior of one of your dependencies changed (like a database server)
+  3. or something changed with the way your users are using your service.
+
+A common strategy for tracking down errors with your service is to begin by
+isolating the start time.  Within Facebook we typically would start by looking
+at service metrics on dashboards.  For this exercise, we'll start by looking
+directly at the service logs.
+
+Today's challenge will be to build a *log inspector* to handle this task.
+You can find the instructions for each in the following man pages.  We recommend
+you do them in this order:
+
+* count_404s
+* timerange_5xx
+* histogram
+
+To read a man page, simply run the *man* command, e.g.::
+
+  $ man count_404s
+
+As a bonus, we've included an additional exercise we won't be talking about
+tonight, but you can try at home if you so choose:
+
+* find_bad_push
+
+
+* Tip: use the utility `cat` to print the contents of a file to your screen,
+       for example, to display these instructions again, run::
+
+  $ cat ~/README.first
+
+
+Good luck!  And thanks for Participating
+
+  - Facebook Production Engineering
